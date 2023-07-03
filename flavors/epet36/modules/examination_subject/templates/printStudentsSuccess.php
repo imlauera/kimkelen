@@ -28,7 +28,7 @@
   <div class="record-header">
     <div>
       <div class="logo"><?php echo image_tag("kimkelen_logo.png", array('absolute' => true)) ?></div>
-      <div class="school-name">Escuela EPET32 de Educación Técnico Profesional </div>
+      <div class="school-name">Escuela EPET36 de Educación Técnico Profesional </div>
       <div class="school-name">de Nivel Medio en Administración, Gestión De Las Organizaciones y Tecnología De Los Alimentos</div>
     </div>
   </div>
