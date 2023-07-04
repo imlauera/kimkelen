@@ -10,17 +10,10 @@ echo -e "expose_php = Off\n"\
 
 envsubst '${DB_NAME} ${DB_HOST} ${DB_USERNAME} ${DB_PASSWORD}' < /app/config/propel.ini.docker > /app/config/propel.ini
 
-echo 'SetEnvIf Request_URI "^/robots.txt$" dontlog' > /etc/apache2/conf.d/docker.conf
-echo 'CustomLog logs/access.log combined env=!dontlog' >> /etc/apache2/conf.d/docker.conf 
-echo 'ServerTokens Prod' >> /etc/apache2/conf.d/docker.conf 
-echo 'ServerSignature Off' >> /etc/apache2/conf.d/docker.conf 
-echo 'TraceEnable Off' >> /etc/apache2/conf.d/docker.conf 
-
-
-echo 'ServerName epet36.localhost' >> /etc/apache2/docker.conf
+echo 'ServerName epet36.localhost' > /etc/apache2/conf.d/temp_config.conf
 echo -e "<LocationMatch /uploads/.*>\n"\
         "     php_flag engine off\n"\
-        "</LocationMatch>\n" >> /etc/apache2/docker.conf
+        "</LocationMatch>\n" >> /etc/apache2/conf.d/temp_config.conf
 
 echo -e "<Directory /app/web>\n"\
         "  RewriteEngine On\n"\
@@ -28,7 +21,14 @@ echo -e "<Directory /app/web>\n"\
         "  RewriteRule ^([^.]+)$ $1.html [QSA]\n"\
         "  RewriteCond %{REQUEST_FILENAME} !-f\n"\
         "  RewriteRule ^(.*)$ index.php [QSA,L]\n"\
-        "</Directory>\n" >> /etc/apache2/docker.conf
+        "</Directory>\n" >> /etc/apache2/conf.d/temp_config.conf
+
+echo 'SetEnvIf Request_URI "^/robots.txt$" dontlog' > /etc/apache2/conf.d/docker.conf
+echo 'CustomLog logs/access.log combined env=!dontlog' >> /etc/apache2/conf.d/docker.conf 
+echo 'ServerTokens Prod' >> /etc/apache2/conf.d/docker.conf 
+echo 'ServerSignature Off' >> /etc/apache2/conf.d/docker.conf 
+echo 'TraceEnable Off' >> /etc/apache2/conf.d/docker.conf 
+
 
 
 CMD='cd /app && rm -fr cache/* && ./symfony propel:build-all --classes-only && ./symfony plugin:publish && ./symfony fix-perms && ./symfony kimkelen:flavor $FLAVOR'
