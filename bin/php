@@ -3,4 +3,4 @@
 set -eo pipefail
 
 DIR=`dirname $0`
-docker-compose -f $DIR/../docker/docker-compose.yml exec -u `id -u`:`id -g` app /app/bin/customphp $@
+docker compose -f $DIR/../docker/docker-compose.yml exec -u `id -u`:`id -g` app /app/bin/customphp $@

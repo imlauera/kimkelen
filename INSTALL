@@ -116,7 +116,3 @@ Quitar ejecución de archivos php en uploads:
   # no, so we redirect to our front web controller
   RewriteRule ^(.*)$ index.php [QSA,L]
 </Directory>
-
-
-Al final lo termine escribiendolo todo adentro Directory RewriteEngine on y locationmatch
-
