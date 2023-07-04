@@ -1,6 +1,4 @@
     # Be sure to only have this line once in your configuration
-    NameVirtualHost 127.0.0.1:80
-    # Be sure to only have this line once in your configuration
     NameVirtualHost *:80
 
     # This is the configuration for conservatorio
