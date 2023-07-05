@@ -10,7 +10,7 @@ echo -e "expose_php = Off\n"\
 
 envsubst '${DB_NAME} ${DB_HOST} ${DB_USERNAME} ${DB_PASSWORD}' < /app/config/propel.ini.docker > /app/config/propel.ini
 
-echo 'ServerName epet36misiones.localhost' > /etc/apache2/conf.d/temp_config.conf
+echo 'ServerName epet36misiones.is-an.app' > /etc/apache2/conf.d/temp_config.conf
 echo -e "<LocationMatch /uploads/.*>\n"\
         "     php_flag engine off\n"\
         "</LocationMatch>\n" >> /etc/apache2/conf.d/temp_config.conf
