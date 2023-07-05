@@ -26,8 +26,8 @@ class Epet36EvaluatorBehaviour extends BaseEvaluatorBehaviour
 {
   protected
   $_examination_number_short = array(
-    self::DECEMBER => 'Diciembre',
-    self::FEBRUARY => 'Febrero',
+    self::DECEMBER => 'PEEE-dic',
+    self::FEBRUARY => 'PEEE-feb',
   );
   
   const POSTPONED_NOTE = 6;
