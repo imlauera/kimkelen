@@ -22,11 +22,7 @@
 <?php use_javascript('home') ?>
 
 <div id="home_container">
-  <h2>
-    <p>Escuela EPET36 de Educación Técnico Profesional</p>
-    <p>de Nivel Medio en Administración, Gestión De Las Organizaciones y Tecnología De Los Alimentos</p>
-  </h2>
-
+  <h1><?php echo __('Escuela E.P.E.T. Nº 36 - Posadas Misiones') ?></h1>
 
   <?php include_component('mainBackend', 'generalInformation') ?>
 

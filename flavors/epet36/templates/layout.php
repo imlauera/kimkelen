@@ -1,4 +1,5 @@
-<?php /*
+<?php
+/*
  * Kimkëlen - School Management Software
  * Copyright (C) 2013 CeSPI - UNLP <desarrollo@cespi.unlp.edu.ar>
  *
@@ -25,25 +26,18 @@
     <?php include_title() ?>
     <script type="text/javascript">
       var theme = 'ThemePanel';
-      var myThemePanelBase = '<?php echo $sf_request->getRelativeUrlRoot(); ?>' + '/pmJSCookMenuPlugin/images/' + theme +'/';
+      var myThemePanelBase = '<?php echo $sf_request->getRelativeUrlRoot();?>' + '/pmJSCookMenuPlugin/images/' + theme +'/';
       var cmBase = myThemePanelBase;
     </script>
-    <link rel="shortcut icon" href="<?php echo image_path("/images/favicon.ico") ?>" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
   </head>
 
   <body onLoad="setFontSize()">
     <?php include_partial('global/flashes') ?>
     <div id="wrapper">
       <div id="header">
-        <div class="logo">
-          <?php echo link_to(image_tag("UBA_kimkelen_white.png", array('alt' => __('Sistema Alumnos - CeSPI'))), '@homepage', array('title' => __('Ir al inicio'))) ?>
-
-	        <?php $school_year = SchoolYearPeer::retrieveCurrent(); ?>
-	        <?php if ($school_year): ?>
-		        <div id="header-school-year">
-			        <?php echo __("Año lectivo vigente: %%school_year%%", array('%%school_year%%' => $school_year)); ?>
-		        </div>
-	        <?php endif; ?>
+       <div class="logo">
+          <?php echo link_to(image_tag("logo-kimkelen.png", array('alt' => __('Sistema Alumnos - CeSPI'))), '@homepage', array('title' => __('Ir al inicio'))) ?>
         </div>
 
         <div class="navigation">
@@ -53,8 +47,8 @@
             </div>
 
             <div class="user">
-              <?php echo __('Usted ha ingresado como  %%username%%', array('%%username%%' => $sf_user->getUsername()))
-              ?>
+              <?php echo __('Usted ha ingresado como  %%username%%',
+                array('%%username%%' => $sf_user->getUsername())) ?>
             </div>
 
             <?php if (count($sf_user->getGroups()) > 1): ?>
@@ -66,11 +60,11 @@
                       <td><?php echo __("Actual role"); ?>:</td>
                       <td><strong><?php echo $sf_user->getLoginRole(); ?></strong></td>
                     </tr>
-                    <tr>
-                      <td><?php echo __('Log in with another role') ?>:</td>
-                      <td><?php echo $form['roles']->render() ?>
+                      <tr>
+                        <td><?php echo __('Log in with another role') ?>:</td>
+                        <td><?php echo $form['roles']->render() ?>
                         <input type="submit" value="<?php echo __('Change') ?>" /></td>
-                    </tr>
+                      </tr>
                   </table>
                 </form>
               </div>
@@ -78,31 +72,34 @@
 
 
             <div class="version">
-              <?php echo link_to_function(image_tag('zoom_plus.png', array('alt' => 'A+', 'title' => __('Agrandar tamaño de letra'))), 'zoomIn()', array('style' => 'padding-right:8px;')) ?>
-              <?php echo link_to_function(image_tag('zoom_minus.png', array('alt' => 'A-', 'title' => __('Achicar tamaño de letra'))), 'zoomOut()', array('style' => 'padding-right:8px;')) ?>
+              <?php echo link_to_function(image_tag('zoom_plus.png', array('alt' => 'A+', 'title' => __('Agrandar tamaño de letra'))),'zoomIn()', array('style'=>'padding-right:8px;'))?>
+              <?php echo link_to_function(image_tag('zoom_minus.png', array('alt' => 'A-', 'title' => __('Achicar tamaño de letra'))),'zoomOut()', array('style'=>'padding-right:8px;'))?>
             </div>
-          <?php endif ?>
+          <?php endif?>
         </div><!-- end navigation -->
         <div style="clear: both; height: 1px; font-size: 1px">&nbsp;</div>
       </div> <!-- end header -->
 
-      <?php if (sfConfig::get('app_testing')): ?>
+      <?php if (sfConfig::get('app_testing')):?>
         <div style="position:absolute; left: 300px; top: 0px; font-size:14px; ">
-          <div style="margin: 4px; width: 300px; background-color: yellow; border: solid 1px red; color: red; padding:4px; text-align: center; text-decoration: blink "> Versión de prueba: los datos son reiniciados periodicamente</div>
+          <center><div style="margin: 4px; width: 300px; background-color: yellow; border: solid 1px red; color: red; padding:4px; text-align: center; text-decoration: blink "> Versión de prueba: los datos son reiniciados periodicamente</div></center>
         </div>
-      <?php endif ?>
+      <?php endif?>
 
       <div id="menu-div">
         <div class="content">
           <?php if ($sf_user->isAuthenticated()): ?>
+
             <?php $menu = pmJSCookMenu::createFromYaml(SchoolBehaviourFactory::getInstance()->getMenuYaml()) ?>
+            <?php // comento ésto porque aún on está finalizado. ?>
+            <?php //$sf_user->addCareerMenu($menu) ?>
             <?php echo $menu->render() ?>
-          <?php endif ?>
+          <?php endif?>
 
           <div class="search-content" >
             <form action="<?php echo url_for('search') ?>" method="post">
               <input type="text" name="query" id="query"/>
-              <input type="submit" value="<?php echo __('Search') ?>"  class="search"/>
+              <input type="submit" value="<?php echo __('Search')?>"  class="search"/>
             </form>
           </div>
         </div>
@@ -117,7 +114,12 @@
         <div class="logo_footer">
           <?php echo link_to(image_tag("logo-kimkelen-footer.png", array('alt' => __('Kimkelen'))), '@homepage', array('title' => __('Ir al inicio'))) ?>
         </div>
-        © <?php echo date('Y'); ?> | CeSPI-UNLP | <?php echo sfConfig::get('app_version_number') ?>
+        © <?php echo date('Y');?> | CeSPI-UNLP | 
+           <?php if(isset($_ENV['VERSION']) && $_ENV['VERSION'] != "" ): ?>
+              <?php echo $_ENV['VERSION']; ?>
+              <?php else: ?>
+              <?php echo sfConfig::get('app_version_number') ?>
+              <?php endif;?>
       </div><!-- end footer -->
     </div> <!-- end wrapper -->
   </body>

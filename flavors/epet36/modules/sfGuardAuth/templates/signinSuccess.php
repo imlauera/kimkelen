@@ -32,19 +32,17 @@
       <div class="form_row">
 
         <?php echo $form ?>
+
       </div>
+
+
       <div class="form_row">
         <input type="submit" value="Ingresar" name="commit" class="button"/>
       </div>
     </div>
   </form>
   <div class="form_footer">
-    <div class="logo_footer">
-
-
-      © 2009 - <?php echo date('Y') ?>| CeSPI - UNLP | <?php echo __('versión %%number%%', array('%%number%%' => sfConfig::get('app_version_number', 1))) ?>
-       <?php echo image_tag("logo-kimkelen-footer-white.png", array('alt' => __('Kimkelen'))); ?>
-    </div>
+    © 2009 - <?php echo date('Y') ?>| CeSPI - UNLP | <?php echo __('versión %%number%%', array('%%number%%' => sfConfig::get('app_version_number', 1))) ?>
   </div>
 </div><!--end login-->
 

@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
  * Kimkëlen - School Management Software
  * Copyright (C) 2013 CeSPI - UNLP <desarrollo@cespi.unlp.edu.ar>
@@ -18,21 +18,19 @@
  * along with Kimkëlen.  If not, see <http://www.gnu.org/licenses/gpl-2.0.html>.
  */ ?>
 <div class="report-header">
-  <div>
-  <div class="logo"><?php echo image_tag("kimkelen_logo.png", array('absolute' => true)) ?></div>
-  <div class="school-name">Escuela EPET36 de Educación Técnico Profesional </div>
-  <div class="school-name">de Nivel Medio en Administración, Gestión De Las Organizaciones y Tecnología De Los Alimentos</div>
-</div>
-
   <div class="header_row">
-    <div class="title"><?php echo __('Student/a') ?>: </div>
-    <div class="name"><?php echo $student ?></div>
-    <div class="header_right">
-      <div class="title"><?php echo __('Course') ?>: </div>
-      <div class="course"><?php echo $division->getYear(); ?></div>
-      <div class="title"><?php echo __('Division') ?>: </div>
-      <div class="orientation"><?php echo $division->getDivisionTitle(); ?></div>
+      <div class="logo"><?php echo image_tag("logo-epet36.png", array('width' => 150, 'height' => 150, 'absolute' => true)); ?></div>
+	  <div class="pair">
+	    <div class="title"><?php echo __('Student') ?>: </div>
+      <div class="name"><?php echo $student ?></div>
+	    <div class="header_right">
+
+	      <div class="title"><?php echo __('Grado') ?>: </div>
+	      <div class="course"><?php echo $division->getYear(); ?>° <?php echo $division->getDivisionTitle(); ?></div>
+
+	       <div class="title"><?php echo __('School year') ?>: </div>
+	       <div class="school_year"><?php echo $school_year; ?></div>
+	    </div>
     </div>
-    <div class="school-year"><?php echo __('ciclo lectivo') ?>: <?php echo $school_year; ?></div>
   </div>
 </div>

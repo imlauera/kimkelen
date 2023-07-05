@@ -4,7 +4,8 @@ body {
  color:#000;
  margin:0;
  padding:0;
- background: #38A962;
+ background: #549876;
+ background-repeat:no-repeat;
 }
 
 #login {
@@ -25,9 +26,10 @@ body {
 
 #login .right {
  width: 310px;
- height:220px;
- padding:2px 0 0 0px;
-background-color: white;
+ height:320px;
+ padding:5px 0 0 0px;
+
+ background-repeat:no-repeat;
  text-align:left;
 }
 
@@ -36,9 +38,9 @@ background-color: white;
  font-size:14.5px;
  color:#fff;
  width: 320px;
- height:100px;
+ height:90px;
  margin:0px 0px 0px 0px;
- background-image:url(../images/EA_logo.png);
+ background-image:url(../images/kimkelen_logo.png);
  background-repeat:no-repeat;
 }
 
@@ -57,6 +59,8 @@ background-color: white;
  color:#000;
  padding-bottom:10px;
  margin:23px 25px 10px 25px;
+ background:url(../images/line.png) left bottom ;
+ background-repeat:no-repeat;
  text-align:left;
 }
 
@@ -87,7 +91,7 @@ background-color: white;
 
 #signin_password, #signin_username {
  border:1px solid #000;
- margin:0px;
+ margin:4px;
  padding:2px;
  height:25px;
  width:250px;
@@ -113,7 +117,7 @@ background-color: white;
  outline:none;
  background:none;
  padding:5px 10px;
- background:#000;
+ background:#363636;
  float:right;
  -moz-border-radius: 5px 5px 5px 5px;
 }
@@ -152,8 +156,4 @@ background-color: white;
 .captcha {
   margin-top:10px;
   float:left;
-}
-
-.form_footer .logo-footer {
- background-image:url(../images/logo-kimkelen-footer.png);
 }
