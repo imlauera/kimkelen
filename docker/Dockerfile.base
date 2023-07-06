@@ -25,4 +25,5 @@ RUN  apk add -U --no-cache \
       fontconfig \
       dbus \
       libxrender-dev \
-      qt5-qtbase
+      qt5-qtbase \
+      apache2-ssl

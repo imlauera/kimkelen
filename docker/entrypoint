@@ -10,18 +10,8 @@ echo -e "expose_php = Off\n"\
 
 envsubst '${DB_NAME} ${DB_HOST} ${DB_USERNAME} ${DB_PASSWORD}' < /app/config/propel.ini.docker > /app/config/propel.ini
 
-echo 'ServerName epet36misiones.is-an.app' > /etc/apache2/conf.d/temp_config.conf
-echo -e "<LocationMatch /uploads/.*>\n"\
-        "     php_flag engine off\n"\
-        "</LocationMatch>\n" >> /etc/apache2/conf.d/temp_config.conf
-
-echo -e "<Directory /app/web>\n"\
-        "  RewriteEngine On\n"\
-        "  RewriteRule ^$ index.html [QSA]\n"\
-        "  RewriteRule ^([^.]+)$ $1.html [QSA]\n"\
-        "  RewriteCond %{REQUEST_FILENAME} !-f\n"\
-        "  RewriteRule ^(.*)$ index.php [QSA,L]\n"\
-        "</Directory>\n" >> /etc/apache2/conf.d/temp_config.conf
+cp config/extra.conf /etc/apache2/conf.d/extra.conf
+#cp config/apache2-foreground /usr/local/bin/apache2-foreground
 
 echo 'SetEnvIf Request_URI "^/robots.txt$" dontlog' > /etc/apache2/conf.d/docker.conf
 echo 'CustomLog logs/access.log combined env=!dontlog' >> /etc/apache2/conf.d/docker.conf 

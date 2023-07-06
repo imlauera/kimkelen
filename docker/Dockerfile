@@ -6,6 +6,8 @@ ADD docker/setenvdefaults /usr/local/bin/setenvdefaults
 ADD . /app
 RUN rm /app/web/*_dev.php
 ENV APACHE_DOCUMENT_ROOT=/app/web/ \
+    DIRECTORY_OPTIONS='-Indexes +FollowSymLinks -MultiViews' \
+    ALLOW_OVERRIDE='None' \
     DB_ENCODING=utf8
 ARG REVISION
 ENV VERSION=$REVISION
