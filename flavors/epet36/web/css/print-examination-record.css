@@ -9,7 +9,7 @@
 body {
   text-align:center;
   font-family:Trebuchet MS, sans-serif;
-  font-size:13px;
+  font-size:12px;
   color:#333;
 }
 
@@ -24,6 +24,7 @@ body {
 .record-header {
   float:left;
   width:100%;
+  margin-bottom: 5px;
 }
 
 .record-header .logo
@@ -82,39 +83,9 @@ body {
   border-left:1px solid #999;
 }
 
-/***table***/
-
-table.gridtable {
-  font-family:arial,sans-serif;
-  font-size:11px;
-  color:#333333;
-  border:none;
-  border-collapse: collapse;
-  width:100%;
-  text-align:center;
-}
-
-table.gridtable th {
-  padding: 3px;
-  border-bottom:1px solid #ccc;
-  font-size:13px;
-  background:#f2f2f2;
-}
 
 .th-subject-name {
   width:25%;
-}
-
-table.gridtable td {
-  padding: 3px;
-  border-bottom:1px solid #ccc;
-  background-color: #ffffff;
-}
-
-table.gridtable tr {
-  border-bottom:1px solid #ccc;
-  background-color: #ffffff;
-  text-align:center;
 }
 
 .subject_name
@@ -144,37 +115,23 @@ table.lefttable tr {
 }
 
 .signature {
-  float: left;
-margin-top: 50px;
-margin-right: 90px;
-border-top-style: dotted;
-border-top-width: thin;
-min-width: 200px;
-}
-
-.signature-right{
-  float:right !important;
-  margin-right: 80px;
-}
-
-.signature-left{
-  float:left !important;
-  margin-left: 80px;
-}
-
-.signature-center{
-  float:center !important;
-  margin: 0px 320px;
-}
-
-.signature-text {
-  text-align: center;
+  float:left;
+  margin-top: 50px;
+  margin-right: 90px;
+  border-top-style: dotted;
+  border-top-width: thin;
+  min-width: 200px;
 }
 
 .signature-subtext {
  font-size: 9px !important;
  text-align: center;
 }
+
+.signature-text {
+ text-align: center;
+}
+
 .record-header .school-name
 {
   text-align:center;
@@ -199,7 +156,7 @@ h2 {
 }
 
 .article-div {
-  margin: 11px 0;
+  margin: 13px 0;
 }
 
 .observation-box {
@@ -216,33 +173,6 @@ h2 {
   border:1px solid #ccc;
   padding: 4px 22px;
   margin-right: 4px;
-}
-
-.owes_correlative
-{
-    font-size: 12px;
-    font-style: oblique;
-}
-
-.division_record
-{
-    width: 35px;
-}
-
-.calification_number
-{
-    width: 40px;
-}
-.calification_letter
-{
-    width: 70px;
-}
-
-.box-sheet
-{
-    width: 100%;
-    float: right;
-    margin-top: 10px;
 }
 
 table.gridtable_bordered {
@@ -273,20 +203,62 @@ table.gridtable_bordered tr {
     text-align:center;
 }
 
-
-.period_record
+.owes_correlative
 {
-    width: 15px;
+    font-size: 12px;
+    font-style: oblique;
+}
+
+.division_record
+{
+    width: 35px;
+}
+
+.number_record
+{
+    width: 100px;
+}
+
+.result_record
+{
+    width: 110px;
+}
+
+.box-sheet
+{
+    width: 100%;
+    float: right;
+    margin-top: 10px;
 }
 
 .student
 {
-    text-align: left;
+    text-align: left !important;
+}
+
+.logo_print_record
+{
+    width: 50px !important;
+}
+
+.calification_letter
+{
+    width: 25px;
+}
+
+.calification_number
+{
+    width: 20px;
+}
+
+.result_record
+{
+    width: 15px;
 }
 
 .orden
 {
-    width: 15px;
+    width: 5px;
 }
 
 .white-background
@@ -295,18 +267,9 @@ table.gridtable_bordered tr {
    font-weight: bold;
 }
 
-.logo_print_record
-{
-    width: 180px;
-}
-
 .sheet-record
 {
     float:right !important;
     font-size: 10px;
     margin-bottom: 0px !important;
-}
-.result_record
-{
-    width: 80px;
 }

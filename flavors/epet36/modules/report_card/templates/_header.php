@@ -19,18 +19,21 @@
  */ ?>
 <div class="report-header">
   <div class="header_row">
-      <div class="logo"><?php echo image_tag("logo-epet36.png", array('width' => 150, 'height' => 150, 'absolute' => true)); ?></div>
-	  <div class="pair">
-	    <div class="title"><?php echo __('Student') ?>: </div>
-      <div class="name"><?php echo $student ?></div>
-	    <div class="header_right">
-
-	      <div class="title"><?php echo __('Grado') ?>: </div>
-	      <div class="course"><?php echo $division->getYear(); ?>° <?php echo $division->getDivisionTitle(); ?></div>
-
-	       <div class="title"><?php echo __('School year') ?>: </div>
-	       <div class="school_year"><?php echo $school_year; ?></div>
-	    </div>
+      <div class="logo"><?php echo image_tag("kimkelen_logo.png", array('absolute' => true, 'class'=> 'logo_report_card')) ?></div>
+    <div class="title"><?php echo __('Student') ?>: </div>
+    <div class="name"><?php echo $student ?></div>
+    <div class="header_right">
+      <div class="title"><?php echo __('Course') ?>: </div>
+      <div class="course"><?php echo $division->getYear(); ?></div>
+      <div class="title"><?php echo __('Division') ?>: </div>
+      <?php $scsy = StudentCareerSchoolYearPeer::retrieveByStudentAndCareerSchoolYear($student, $division->getCareerSchoolYear())?>
+      <div class="division"><?php $d = $scsy->getDivisions(); echo ($d[0]) ? $d[0]->getDivisionTitle() : '' ?></div>
+      <?php if ($student_career->getOrientation()): ?>
+        <div class="title"><?php echo __('Career orientation') ?>: </div>
+        <div class="orientation"><?php echo (($student_career->getOrientation()) ? $student_career->getOrientation() : '-'); ?></div>
+      <?php endif ?>
+     <div class="title"><?php echo __('School year') ?>: </div>
+      <div class="school_year"><?php echo $school_year; ?></div>
     </div>
   </div>
 </div>

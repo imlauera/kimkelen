@@ -8,7 +8,7 @@
 
 body {
   text-align:center;
-  font-family:Trebuchet MS, sans-serif;
+  font-family:arial,sans-serif;
   font-size:11px;
   color:#333;
 }
@@ -18,8 +18,8 @@ body {
 .report-wrapper
 {
   text-align:left;
-  width:900px;
-  margin:10px auto;
+  width:98%;
+  margin:4px auto;
 }
 
 .report-header
@@ -44,7 +44,7 @@ body {
   border-bottom:1px solid #ccc;
   float:left;
   width:100%;
-  padding:10px 0px;
+  padding:0px 0px;
 }
 
 .header_row .header_right
@@ -54,46 +54,51 @@ body {
 
 .header_row .title
 {
-    float:left;
-    font-weight:bold;
-    font-size:13px;
-    padding-top:3px;
-    padding-right:5px;
-    margin-left: 30px;
+  float:left;
+  font-weight:bold;
+  font-size:13px;
+  padding-top:40px;
+  padding-right:5px;
+  padding-left: 5px;
 }
-
 
 .header_row .name
 {
-    font-size:16px;
-    float:left;
-
+  float:left;
+  font-size:14px;
+  padding-top: 40px;
 }
 
 .header_row .course
 {
-    float:left;
-    font-size:13px;
-    padding:3px;
-    width:35px;
+  float:left;
+  font-size:13px;
+  width:20px;
+  padding-top: 40px;
 
+}
+
+.header_row .division
+{
+  float:left;
+  font-size:13px;
+  width:20px;
+  padding-top: 40px;
+}
+
+.header_row .orientation
+{
+  float:left;
+  font-size:13px;
+  padding-top: 40px;
 }
 
 .header_row .school_year
 {
-    float:left;
-    font-size:13px;
-    padding:3px;
-    width:10px;
-    margin-right:20px
+  float:right;
+  font-size:13px;
+  padding-top: 40px;
 }
-
-.pair {
-    padding-top: 46px;
-}
-
-
-
 
 .row_top
 {
@@ -113,9 +118,9 @@ body {
 }
 
 .report-content .title {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
-  padding:2px;
+  padding:3px;
   text-transform: uppercase;
   background:#f2f2f2;
   border-bottom:1px solid #ccc;
@@ -124,7 +129,7 @@ body {
 .report-content .report-average{
   font-size: 12px;
   font-weight: bold;
-  padding:5px;
+  padding:3px;
   text-transform: uppercase;
   background:#f2f2f2;
   border-bottom:1px solid #ccc;
@@ -148,7 +153,7 @@ body {
 
 table.gridtable {
   font-family:arial,sans-serif;
-  font-size:13px;
+  font-size:11px;
   color:#333333;
   border:none;
   border-collapse: collapse;
@@ -157,7 +162,7 @@ table.gridtable {
 }
 
 table.gridtable th {
-  padding: 2px;
+  padding: 3px;
   border-bottom:1px solid #ccc;
   font-size:12px;
 }
@@ -167,7 +172,7 @@ table.gridtable th {
 }
 
 table.gridtable td {
-  padding: 3px;
+  padding: 2px;
   border-bottom:1px solid #ccc;
   background-color: #ffffff;
 }
@@ -186,7 +191,7 @@ table.gridtable tr {
 
 table.lefttable {
   font-family:arial,sans-serif;
-  font-size:13px;
+  font-size:11px;
   color:#333333;
   border:none;
   border-collapse: collapse;
@@ -197,18 +202,19 @@ table.lefttable {
 table.lefttable tr {
   border-top:1px solid #ccc;
   background-color: #ffffff;
-  font-size: 12px;
 }
 
 .colsleft{
   float:left;
-  width: 33%;
-  margin-top: -12px;
+  height: auto;
+  width:51%;
+  padding-top: 5px;
 }
 
 .colsright{
   float:right;
-  margin-top: -12px;
+  width: 48%;
+  padding-top: 5px;
 }
 
 .row{
@@ -219,70 +225,60 @@ table.lefttable tr {
 }
 
 .titletable {
-  font-size:14px;
+  font-size:11px;
   font-weight:bold;
   display:block;
-  padding:3px;
+  padding:2px;
 }
 
 .rowins{
   border:1px solid #ccc;
-  margin-top:8px;
-  padding:0px 5px;
+  padding:0px 4px;
+  min-height: 5em;
+  max-width: 25em;
 }
 
 .rowcom{
   border:1px solid #ccc;
-  padding:0px 5px;
+  padding:0px 4px;
   float:left;
-  width:46%;
-  margin-top:5px;
+  width:auto;
   min-height: 5em;
+  max-width: 17.5em;
 }
 
 .rowamon{
   border:1px solid #ccc;
-  padding:0px 5px;
-  float:right;
-  width:46%;
-  margin-top:5px;
+  padding:0px 4px;
+  float:left;
+  width:auto;
+  height: 5em;
 }
 
 .rowfirm_authority{
   border:1px solid #ccc;
-  float:right;
-  margin-top:10px;
-  margin-left:5px;
+  float:left;
   padding:0px 10px;
-  height:120px;
+  height:100px;
+  width: auto;
 }
 
 .rowfirm_responsible{
   border:1px solid #ccc;
-  float:right;
-  margin-top:10px;
-  margin-left:5px;
+  float:left;
   padding:0px 10px;
-  height:120px;
-}
-
-.rowfirm_teacher{
-    border:1px solid #ccc;
-    float:left;
-    margin-top:10px;
-    margin-left:5px;
-    padding:0px 30px;
-    height:120px;
+  height:100px;
+  width: auto;
+  margin-right: 5px;
 }
 
 .rownotice{
   border:1px solid #ccc;
   float:left;
-  margin-top:10px;
-  margin-bottom:10px;
-  padding:0px 10px;
-  height:80px;
-  width:869px;
+  padding:0px 20px;
+  height:100px;
+  width:auto;
+  margin-right: 5px;
 }
 
 #sfWebDebug,
@@ -303,7 +299,7 @@ table.lefttable tr {
 
 table.gridtable_bordered {
     font-family:arial,sans-serif;
-    font-size:13px;
+    font-size:11px;
     color:#333333;
     border:1px solid #ccc;
     border-collapse: collapse;
@@ -314,7 +310,7 @@ table.gridtable_bordered {
 table.gridtable_bordered th {
     padding: 3px;
     border:1px solid #ccc;
-    font-size:14px;
+    font-size:12px;
 }
 
 table.gridtable_bordered td {
@@ -333,7 +329,7 @@ table.gridtable_bordered tr {
 {
   float:left;
   font-weight:bold;
-  font-size:14px;
+  font-size:13px;
   padding-right:5px;
   padding-left: 5px;
 }
@@ -341,14 +337,10 @@ table.gridtable_bordered tr {
 .header_row .row-content
 {
   float:left;
-  font-size:14px;
+  font-size:13px;
 }
 
-.option
+.logo_report_card
 {
-    font-size: 13px;
-    font-weight: bold;
-    padding:5px;
-    background:#f2f2f2;
-    border-bottom:1px solid #ccc;
+    width: 50px;
 }

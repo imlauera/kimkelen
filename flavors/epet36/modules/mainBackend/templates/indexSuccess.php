@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*
  * Kimkëlen - School Management Software
  * Copyright (C) 2013 CeSPI - UNLP <desarrollo@cespi.unlp.edu.ar>
@@ -22,22 +22,21 @@
 <?php use_javascript('home') ?>
 
 <div id="home_container">
-  <h1><?php echo __('Escuela E.P.E.T. Nº 36 - Posadas Misiones') ?></h1>
+  <h1><?php echo __('Liceo Víctor Mercante') ?></h1>
 
   <?php include_component('mainBackend', 'generalInformation') ?>
 
   <?php if($sf_user->hasCredential('show_student')):?>
     <?php include_component('mainBackend', 'studentBox') ?>
   <?php endif?>
-
+  
   <?php if($sf_user->hasCredential('show_teacher')):?>
     <?php include_component('mainBackend', 'teacherBox') ?>
   <?php endif?>
-
+  
   <?php if($sf_user->hasCredential('show_course')):?>
     <?php include_component('mainBackend', 'divisionBox') ?>
-  <?php endif?>
-
+  <?php endif?>  
 </div>
 
 <?php javascript_tag() ?>

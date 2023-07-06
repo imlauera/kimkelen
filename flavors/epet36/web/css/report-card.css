@@ -17,8 +17,8 @@ body {
 
 .report-wrapper{
   text-align:left;
-  width:900px;
-  margin:30px auto;
+  width:90%;
+  margin:4px auto;
 }
 
 .report-header {
@@ -55,40 +55,63 @@ body {
   float:left;
   font-weight:bold;
   font-size:13px;
-  padding-top:3px;
+  padding-top:65px;
   padding-right:5px;
-  margin-left: 30px;
+  padding-left: 5px;
 }
 
-
+.header_row .title2
+{
+  float:left;
+  font-weight:bold;
+  font-size:13px;
+  padding-right:5px;
+  padding-left: 5px;
+}
 
 .header_row .name
 {
-  font-size:16px;
   float:left;
-
+  font-size:16px;
+  padding-top: 62px;
 }
 
 .header_row .course
 {
   float:left;
   font-size:13px;
-  padding:3px;
-  width:35px;
+  width:20px;
+  padding-top: 65px;
 
+}
+
+.header_row .division
+{
+  float:left;
+  font-size:13px;
+  width:100px;
+  padding-top: 65px;
+}
+
+
+.header_row .orientation
+{
+  float:left;
+  font-size:13px;
+  padding-top: 65px;
+}
+
+.header_row .row-content
+{
+  float:left;
+  font-size:13px;
 }
 
 .header_row .school_year
 {
-  float:left;
+  float:right;
   font-size:13px;
-  padding:3px;
-  width:10px;
-  margin-right:20px
-}
-
-.pair {
-  padding-top: 46px;
+  padding-top: 65px;
 }
 
 .row_top
@@ -109,7 +132,7 @@ body {
 }
 
 .report-content .title {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   padding:5px;
   text-transform: uppercase;
@@ -144,18 +167,18 @@ body {
 
 table.gridtable {
   font-family:arial,sans-serif;
-  font-size:13px;
+  font-size:11px;
   color:#333333;
   border:none;
   border-collapse: collapse;
   width:100%;
-  text-align:center;
+  text-align: center;
 }
 
 table.gridtable th {
-  padding: 8px;
+  padding: 3px;
   border-bottom:1px solid #ccc;
-  font-size:14px;
+  font-size:12px;
 }
 
 .th-subject-name {
@@ -166,6 +189,7 @@ table.gridtable td {
   padding: 3px;
   border-bottom:1px solid #ccc;
   background-color: #ffffff;
+
 }
 
 table.gridtable tr {
@@ -183,7 +207,7 @@ table.gridtable tr {
 
 table.lefttable {
   font-family:arial,sans-serif;
-  font-size:13px;
+  font-size:11px;
   color:#333333;
   border:none;
   border-collapse: collapse;
@@ -198,11 +222,16 @@ table.lefttable tr {
 
 .colsleft{
   float:left;
-  width: 33%;
+  padding-top: 5px;
+  height: auto;
+  width:51%;
 }
 
 .colsright{
   float:right;
+  height: 20%;
+  width: 48%;
+  padding-top: 5px;
 }
 
 .row{
@@ -213,70 +242,85 @@ table.lefttable tr {
 }
 
 .titletable {
-  font-size:13px;
+  font-size:12px;
   font-weight:bold;
   display:block;
-  padding:3px;
+  padding:1px;
 }
 
 .rowins{
   border:1px solid #ccc;
-  margin-top:10px;
-  padding:0px 5px;
+  float:left;
+  width: auto;
+  min-height: 5em;
+  padding:3px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  max-width: 25em;
 }
 
 .rowcom{
   border:1px solid #ccc;
-  padding:0px 5px;
   float:left;
-  width:46%;
-  margin-top:5px;
+  width: auto;
   min-height: 5em;
+  padding-top:3px;
+  margin-right: 6px;
+  padding-left:10px;
+  padding-right:10px;
+  max-width: 17.5em;
+}
+
+.rowprev{
+  border:1px solid #ccc;
+  float:left;
+  width: auto;
+  min-height: 5em;
+  padding-top:3px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding-left:10px;
+  padding-right:10px;
 }
 
 .rowamon{
   border:1px solid #ccc;
-  padding:0px 5px;
-  float:right;
-  width:46%;
-  margin-top:5px;
+  float:left;
+  width: 15%;
+  min-height: 5em;
+  padding:3px;
+  padding-left:10px;
+  padding-right:10px;
+  margin-right: 6px;
+  margin-bottom: 6px;
 }
 
 .rowfirm_authority{
   border:1px solid #ccc;
-  float:right;
-  margin-top:10px;
-  margin-left:5px;
-  padding:0px 20px;
-  height:126px;
+   float:left;
+  padding:0px 15px;
+  height:80px;
+  width:auto;
 }
 
 .rowfirm_responsible{
   border:1px solid #ccc;
-  float:right;
-  margin-top:10px;
-  margin-left:5px;
+  float:left;
   padding:0px 15px;
-  height:126px;
-}
-
-.rowfirm_teacher{
-    border:1px solid #ccc;
-    float:left;
-    margin-top:10px;
-    margin-left:5px;
-    padding:0px 30px;
-    height:126px;
+  height:80px;
+  width:auto;
+  margin-right: 5px;
 }
 
 .rownotice{
   border:1px solid #ccc;
   float:left;
-  margin-top:10px;
-  padding:0px 15px;
-  height:150px;
-  width:869px;
+  height:80px;
+  width:auto;
+  padding: 0px 15px;
+  margin-right: 5px;
 }
+
 .report-header .school-year
 {
     text-align:right;
@@ -289,7 +333,7 @@ table.lefttable tr {
 
 table.gridtable_bordered {
     font-family:arial,sans-serif;
-    font-size:13px;
+    font-size:11px;
     color:#333333;
     border:1px solid #ccc;
     border-collapse: collapse;
@@ -300,7 +344,7 @@ table.gridtable_bordered {
 table.gridtable_bordered th {
     padding: 3px;
     border:1px solid #ccc;
-    font-size:14px;
+    font-size:12px;
 }
 
 table.gridtable_bordered td {
@@ -313,30 +357,6 @@ table.gridtable_bordered tr {
     border:1px solid #ccc;
     background-color: #ffffff;
     text-align:center;
-}
-
-.header_row .title2
-{
-  float:left;
-  font-weight:bold;
-  font-size:13px;
-  padding-right:5px;
-  padding-left: 5px;
-}
-
-.header_row .row-content
-{
-  float:left;
-  font-size:13px;
-}
-
-.option
-{
-    font-size: 13px;
-    font-weight: bold;
-    padding:5px;
-    background:#f2f2f2;
-    border-bottom:1px solid #ccc;
 }
 
 .report-text{	
@@ -367,10 +387,8 @@ div.report-text p {
 }
 
 .logo_certificate img{
-    width: 40%;
-    margin:10px;
+	width: 66%;
 }
-
 .report-content_student{
     font-size: 14px
 }
@@ -396,4 +414,3 @@ div.report-text p {
     padding-top: 1em;
     font-size:12px;
 }
-

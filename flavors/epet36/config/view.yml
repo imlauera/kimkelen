@@ -3,9 +3,9 @@ default:
     content-type: text/html
 
   metas:
-    title:         Kimkëlen
-    description:   Sistema de gestión de alumnos - CeSPI - UNLP
-    keywords:      Kimkelen, Cespi, unlp, alumnos
+    title:         Liceo Víctor Mercante - UNLP
+    description:   Liceo Víctor Mercante - UNLP
+    keywords:      liceo, victor, mercante, unlp
     language:      es_AR
     #robots:       index, follow
 

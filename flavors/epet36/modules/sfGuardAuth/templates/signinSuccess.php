@@ -20,31 +20,35 @@
 <?php use_helper('I18N', 'Form', 'Javascript') ?>
 
 <div id="login">
-  <div class="left">
-    <div class="logo"></div>
+  <div class="content">
+
+    <div class="left">
+      <div class="logo"></div>
+    </div>
+
+    <form action="<?php echo url_for('@sf_guard_signin') ?>" method="post">
+      <?php echo $form->renderHiddenFields() ?>
+      <div class="right">
+        <div class="title_login">Login</div>
+
+        <div class="form_row">
+          <?php echo $form ?>
+        </div>
+        <div class="form_row">
+          <input type="submit" value="Ingresar" name="commit" class="button"/>
+        </div>
+      </div>
+    </form>
   </div>
 
-  <form action="<?php echo url_for('@sf_guard_signin') ?>" method="post">
-    <?php echo $form->renderHiddenFields() ?>
-    <div class="right">
-      <div class="title_login">Login</div>
-
-      <div class="form_row">
-
-        <?php echo $form ?>
-
-      </div>
-
-
-      <div class="form_row">
-        <input type="submit" value="Ingresar" name="commit" class="button"/>
-      </div>
-    </div>
-  </form>
   <div class="form_footer">
     © 2009 - <?php echo date('Y') ?>| CeSPI - UNLP | <?php echo __('versión %%number%%', array('%%number%%' => sfConfig::get('app_version_number', 1))) ?>
+    <div class="logo_footer">
+      <?php echo image_tag("logo-kimkelen-footer-white.png", array('alt' => __('Kimkelen'))); ?>
+    </div>
   </div>
 </div><!--end login-->
+
 
 <?php use_javascript('jquery.js') ?>
 <?php javascript_tag() ?>
