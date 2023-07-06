@@ -11,6 +11,7 @@ echo -e "expose_php = Off\n"\
 envsubst '${DB_NAME} ${DB_HOST} ${DB_USERNAME} ${DB_PASSWORD}' < /app/config/propel.ini.docker > /app/config/propel.ini
 
 cp config/extra.conf /etc/apache2/conf.d/extra.conf
+#cp config/ssl.conf /etc/apache2/conf.d/ssl.conf
 #cp config/apache2-foreground /usr/local/bin/apache2-foreground
 
 echo 'SetEnvIf Request_URI "^/robots.txt$" dontlog' > /etc/apache2/conf.d/docker.conf
