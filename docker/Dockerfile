@@ -10,3 +10,4 @@ ENV APACHE_DOCUMENT_ROOT=/app/web/ \
 ARG REVISION
 ENV VERSION=$REVISION
 WORKDIR /app
+RUN chown -R apache /app/data
