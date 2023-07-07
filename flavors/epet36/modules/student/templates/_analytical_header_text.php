@@ -22,7 +22,7 @@
 <div>
     <p class="header-text"> La Directora del
         <span><?php echo SchoolBehaviourFactory::getInstance()->getSchoolName() ?></span>
-        de la <?php echo __("Universidad Nacional de La Plata") ?> CERTIFICA que
+        CERTIFICA que
         <strong><?php echo substr($student->getPerson()->getFullName(), 0, strlen($student->getPerson()->getFullName()) -1 ); ?>,</strong> <strong><?php echo BaseCustomOptionsHolder::getInstance('IdentificationType')->getStringFor($student->getPerson()->getIdentificationType()) ?> <?php echo $student->getPerson()->getIdentificationNumber() ?>,</strong>
         <?php echo ($student->getPerson()->getFullNationality()) ? 'de nacionalidad ' . strtolower($student->getPerson()->getFullNationality()) . ', ' : ''?>
         nacido/a en <span><?php echo ucwords($student->getPerson()->getBirthCityRepresentation()) . ','; ?> <?php echo ($student->getPerson()->getBirthStaterepresentation() != 'Sin Provincias') ? ucwords($student->getPerson()->getBirthStaterepresentation()) . ', ' : ''; ?> <?php echo ucwords($student->getPerson()->getBirthCountryrepresentation()); ?></span>,

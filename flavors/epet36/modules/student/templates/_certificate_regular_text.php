@@ -18,7 +18,7 @@
  */ ?>
 <?php $division = DivisionPeer::retrieveByStudentCareerSchoolYear($student->getCurrentStudentCareerSchoolYear());?>
 <p>
-    Las autoridades del <?php echo SchoolBehaviourFactory::getInstance()->getSchoolName() ?> de la Universidad Nacional de La Plata,
+    Las autoridades del <?php echo SchoolBehaviourFactory::getInstance()->getSchoolName() ?>,
     certifican que <b><?php echo $student .' '. $student->getPerson()->getFullIdentification() ?> </b>
     es alumno/a regular de <?php echo $division->getYear() . '° ' . $division->getDivisionTitle()->getName() ?> en el presente ciclo lectivo. 
 </p>
