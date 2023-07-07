@@ -37,7 +37,7 @@
     <div id="wrapper">
       <div id="header">
        <div class="logo">
-         <?php echo link_to(image_tag("logolvm.gif", array('alt' => __('Liceo Víctor Mercante - UNLP'))), '@homepage', array('title' => __('Ir al inicio'))) ?>
+         <?php echo link_to(image_tag("logolvm.gif", array('alt' => __('E.P.E.T. N° 36'))), '@homepage', array('title' => __('Ir al inicio'))) ?>
 
 	       <?php $school_year = SchoolYearPeer::retrieveCurrent(); ?>
 		     <?php if ($school_year): ?>

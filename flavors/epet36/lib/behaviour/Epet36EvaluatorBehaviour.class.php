@@ -22,7 +22,7 @@
 /**
  * Copy and rename this class if you want to extend and customize
  */
-class LvmEvaluatorBehaviour extends BaseEvaluatorBehaviour
+class Epet36EvaluatorBehaviour extends BaseEvaluatorBehaviour
 {
 
   const HISTORIA_DEL_ARTE = 134;
@@ -183,7 +183,7 @@ class LvmEvaluatorBehaviour extends BaseEvaluatorBehaviour
 
   }
 
-  public function getLvmSpecialSubjects($school_year = null)
+  public function getEpet36SpecialSubjects($school_year = null)
   {
     if (is_null($school_year))
     {
@@ -202,7 +202,7 @@ class LvmEvaluatorBehaviour extends BaseEvaluatorBehaviour
 
   public function getCourseSubjectStudentsForIntroduccion($student, $career_school_year)
   {
-    $ids = $this->getLvmSpecialSubjectIds($career_school_year->getSchoolYear());
+    $ids = $this->getEpet36SpecialSubjectIds($career_school_year->getSchoolYear());
     $c = new Criteria();
     $c->add(CourseSubjectStudentPeer::STUDENT_ID, $student->getId());
     $c->addJoin(CourseSubjectPeer::ID, CourseSubjectStudentPeer::COURSE_SUBJECT_ID);
@@ -212,10 +212,10 @@ class LvmEvaluatorBehaviour extends BaseEvaluatorBehaviour
 
   }
 
-  public function getLvmSpecialSubjectIds($school_year)
+  public function getEpet36SpecialSubjectIds($school_year)
   {
     $result = array();
-    foreach ($this->getLvmSpecialSubjects($school_year) as $career_subject_school_year)
+    foreach ($this->getEpet36SpecialSubjects($school_year) as $career_subject_school_year)
     {
       $result[] = $career_subject_school_year->getId();
     }

@@ -17,7 +17,7 @@
  * along with Kimkëlen.  If not, see <http://www.gnu.org/licenses/gpl-2.0.html>.
  */ ?>
 <?php
-class LvmSubjectStudentAnalytic extends BaseSubjectStudentAnalytic
+class Epet36SubjectStudentAnalytic extends BaseSubjectStudentAnalytic
 {
     protected $materias_introduccion = array(28,29,30);
     

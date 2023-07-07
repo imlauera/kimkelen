@@ -19,11 +19,11 @@
  */ ?>
 <?php
 /**
- * Description of LvmStudentFormFilter
+ * Description of Epet36StudentFormFilter
  *
  * @author gramirez
  */
-class LvmStudentFormFilter extends StudentFormFilter
+class Epet36StudentFormFilter extends StudentFormFilter
 {
 
   public function configure() {

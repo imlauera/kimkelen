@@ -22,7 +22,7 @@
 /**
  * Copy and rename this class if you want to extend and customize
  */
-class LvmFormFactory extends BaseFormFactory
+class Epet36FormFactory extends BaseFormFactory
 {
   /**
    * Returns form used by student new|edit action
@@ -31,7 +31,7 @@ class LvmFormFactory extends BaseFormFactory
    */
   public function getStudentForm()
   {
-    return 'LvmStudentForm';
+    return 'Epet36StudentForm';
   }
 
   /**
@@ -41,10 +41,10 @@ class LvmFormFactory extends BaseFormFactory
    */
   public function getStudentFormFilter()
   {
-    return 'LvmStudentFormFilter';
+    return 'Epet36StudentFormFilter';
   }
   
   public function getAnalyticForm() {
-      return 'LvmAnalyticForm';
+      return 'Epet36AnalyticForm';
   }
 }

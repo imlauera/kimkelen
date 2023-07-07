@@ -22,9 +22,9 @@
 /**
  * Copy and rename this class if you want to extend and customize
  */
-class LvmSchoolBehaviour extends BaseSchoolBehaviour
+class Epet36SchoolBehaviour extends BaseSchoolBehaviour
 {
-	protected $school_name = "Liceo Víctor Mercante";
+	protected $school_name = "E.P.E.T. N° 36";
         protected $araucano_code = 3185;
         protected $letter = "L";
 
@@ -127,7 +127,7 @@ class LvmSchoolBehaviour extends BaseSchoolBehaviour
     }
     elseif ($year == 6)
     {
-      return array(LvmEvaluatorBehaviour::HISTORIA_DEL_ARTE);
+      return array(Epet36EvaluatorBehaviour::HISTORIA_DEL_ARTE);
     }
 
     return array(0);
@@ -135,7 +135,7 @@ class LvmSchoolBehaviour extends BaseSchoolBehaviour
 
   public function getCourseSubjectStudentsForCourseType($student ,$course_type , $school_year = null)
   {
-    $not_in = SchoolBehaviourFactory::getEvaluatorInstance()->getLvmSpecialSubjectIds($school_year);
+    $not_in = SchoolBehaviourFactory::getEvaluatorInstance()->getEpet36SpecialSubjectIds($school_year);
 
     if (is_null($school_year))
     {
@@ -173,7 +173,7 @@ class LvmSchoolBehaviour extends BaseSchoolBehaviour
 
   protected function getClassSubjectStudentAnalytic(){
 
-    return 'LvmSubjectStudentAnalytic';
+    return 'Epet36SubjectStudentAnalytic';
 
   }
   

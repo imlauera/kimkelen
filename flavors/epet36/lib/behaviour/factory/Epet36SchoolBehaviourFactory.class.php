@@ -22,5 +22,6 @@
 /**
  * Copy and rename this class if you want to extend and customize
  */
-class LvmEvaluationRenderer extends EvaluationRenderer {
+class Epet36SchoolBehaviourFactory extends SchoolBehaviourFactory
+{
 }

@@ -3,9 +3,9 @@ default:
     content-type: text/html
 
   metas:
-    title:         Liceo Víctor Mercante - UNLP
-    description:   Liceo Víctor Mercante - UNLP
-    keywords:      liceo, victor, mercante, unlp
+    title:         E.P.E.T. N° 36
+    description:   E.P.E.T. N° 36
+    keywords:      epet36, escuela
     language:      es_AR
     #robots:       index, follow
 

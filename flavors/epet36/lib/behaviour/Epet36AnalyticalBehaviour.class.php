@@ -18,7 +18,7 @@
  * along with Kimkëlen.  If not, see <http://www.gnu.org/licenses/gpl-2.0.html>.
  */
 
-class LvmAnalyticalBehaviour extends DefaultAnalyticalBehaviour
+class Epet36AnalyticalBehaviour extends DefaultAnalyticalBehaviour
 {
     const ORIENTACION_ESCOLAR = 238;
     

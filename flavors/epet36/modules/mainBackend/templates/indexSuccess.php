@@ -22,7 +22,7 @@
 <?php use_javascript('home') ?>
 
 <div id="home_container">
-  <h1><?php echo __('Liceo Víctor Mercante') ?></h1>
+  <h1><?php echo __('E.P.E.T. N° 36') ?></h1>
 
   <?php include_component('mainBackend', 'generalInformation') ?>
 

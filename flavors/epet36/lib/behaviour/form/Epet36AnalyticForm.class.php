@@ -7,7 +7,7 @@
  * @subpackage form
  * @author     Your name here
  */
-class LvmAnalyticForm extends AnalyticForm
+class Epet36AnalyticForm extends AnalyticForm
 {
   public function configure()
   {

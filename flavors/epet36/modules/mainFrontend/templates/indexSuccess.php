@@ -21,7 +21,7 @@
 <?php use_stylesheet('home-frontend') ?>
 
 <div class="home-menu">
-  <h1><?php echo __('Liceo Víctor Mercante') ?></h1>
+  <h1><?php echo __('E.P.E.T. N° 36') ?></h1>
 
   <div class="container">
     <?php echo link_to(__('Mis Calificaciones'), '@career_student', array('class' => 'button')) ?>

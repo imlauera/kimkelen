@@ -23,7 +23,7 @@
  *
  * @author gramirez
  */
-class LvmStudentForm extends StudentForm
+class Epet36StudentForm extends StudentForm
 {
 
   public function configure ()
