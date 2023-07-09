@@ -5,6 +5,6 @@ all:
   selenium:
     driver:
       browser: '*firefox'
-      browser_url: 'http://localhost'
+      browser_url: 'https://localhost'
       timeout: 10
       http_timeout: 10
