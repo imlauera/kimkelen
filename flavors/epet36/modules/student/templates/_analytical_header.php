@@ -46,7 +46,7 @@
 			</div>
                     </div>
                     
-                     <?php echo image_tag("kimkelen_logo_analitico.png", array( 'class'=>'school_logo', 'absolute' => true, 'width' => 390, 'height' => 70)) ?>
+                     <?php echo image_tag("kimkelen_logo_analitico.png", array( 'class'=>'school_logo', 'absolute' => true, 'height' => 70)) ?>
 		</div>
 		<div id="header_analytical_data_right">	    
 		</div>
