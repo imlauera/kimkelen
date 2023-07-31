@@ -29,7 +29,7 @@
       var myThemePanelBase = '<?php echo $sf_request->getRelativeUrlRoot();?>' + '/pmJSCookMenuPlugin/images/' + theme +'/';
       var cmBase = myThemePanelBase;
     </script>
-    <link rel="shortcut icon" href="<?php echo image_path("images/favicon.ico") ?>" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
   </head>
 
   <body onLoad="setFontSize()">
@@ -37,15 +37,8 @@
     <div id="wrapper">
       <div id="header">
        <div class="logo">
-         <?php echo link_to(image_tag("logolvm.gif", array('alt' => __('E.P.E.T. N° 36'))), '@homepage', array('title' => __('Ir al inicio'))) ?>
-
-	       <?php $school_year = SchoolYearPeer::retrieveCurrent(); ?>
-		     <?php if ($school_year): ?>
-		       <div id="header-school-year">
-			       <?php echo __("Año lectivo vigente: %%school_year%%", array('%%school_year%%' => $school_year)); ?>
-		       </div>
-		     <?php endif; ?>
-       </div>
+          <?php echo link_to(image_tag("logo-kimkelen.png", array('alt' => __('Sistema Alumnos - CeSPI'))), '@homepage', array('title' => __('Ir al inicio'))) ?>
+        </div>
 
         <div class="navigation">
           <?php if ($sf_user->isAuthenticated()): ?>
@@ -89,23 +82,28 @@
 
       <?php if (sfConfig::get('app_testing')):?>
         <div style="position:absolute; left: 300px; top: 0px; font-size:14px; ">
-          <div style="margin: 4px; width: 200px; background-color: yellow; border: solid 1px red; color: red; padding:4px; text-align: center; "> Versión de prueba </div>
+          <center><div style="margin: 4px; width: 300px; background-color: yellow; border: solid 1px red; color: red; padding:4px; text-align: center; text-decoration: blink "> Versión de prueba: los datos son reiniciados periodicamente</div></center>
         </div>
       <?php endif?>
 
       <div id="menu-div">
         <div class="content">
           <?php if ($sf_user->isAuthenticated()): ?>
+
             <?php $menu = pmJSCookMenu::createFromYaml(SchoolBehaviourFactory::getInstance()->getMenuYaml()) ?>
+            <?php // comento ésto porque aún on está finalizado. ?>
+            <?php //$sf_user->addCareerMenu($menu) ?>
             <?php echo $menu->render() ?>
           <?php endif?>
-          <div class="search-content">
+
+          <div class="search-content" >
             <form action="<?php echo url_for('search') ?>" method="post">
               <input type="text" name="query" id="query"/>
               <input type="submit" value="<?php echo __('Search')?>"  class="search"/>
             </form>
           </div>
         </div>
+
       </div><!-- end menu-div -->
 
       <div id="content">
@@ -116,8 +114,8 @@
         <div class="logo_footer">
           <?php echo link_to(image_tag("logo-kimkelen-footer.png", array('alt' => __('Kimkelen'))), '@homepage', array('title' => __('Ir al inicio'))) ?>
         </div>
-          © <?php echo date('Y'); ?> | CeSPI-UNLP | 
-          <?php if(isset($_ENV['VERSION']) && $_ENV['VERSION'] != "" ): ?>
+        © <?php echo date('Y');?> | CeSPI-UNLP | 
+           <?php if(isset($_ENV['VERSION']) && $_ENV['VERSION'] != "" ): ?>
               <?php echo $_ENV['VERSION']; ?>
               <?php else: ?>
               <?php echo sfConfig::get('app_version_number') ?>

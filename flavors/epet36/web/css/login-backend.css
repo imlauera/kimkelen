@@ -4,94 +4,100 @@ body {
  color:#000;
  margin:0;
  padding:0;
- background-color:#003F2D;
+ background: #549876;
+ background-repeat:no-repeat;
 }
 
 #login {
- border:1px solid #003F2D;
  position: absolute;
  width: auto; /* ancho de la capa a centrar */
  height: auto; /* alto de la capa a centrar */
  top: 25%;
- left: 50%;
+ left: 52%;
  margin-left: -200px; /* mitad del ancho de la capa a centrar */
  margin-top: -100px; /* mitad del alto de la capa a centrar */
 }
 
+#login .left {
+ padding:0px;
+ width: 310px;
+ padding:5px 5px;
+}
+
 #login .right {
- border:0px solid #fff;
- background-color:#003F2D;
- width: 250px;
- height:300px;
+ width: 310px;
+ height:320px;
  padding:5px 0 0 0px;
- float:left;
+
+ background-repeat:no-repeat;
+ text-align:left;
 }
 
 #login .logo {
- font-family:georgia,serif;
+ font-family:arial,sans-serif;
  font-size:14.5px;
  color:#fff;
- width: 250px;
+ width: 320px;
  height:183px;
  margin:0px 0px 0px 0px;
- background-image:url(../images/logologin.gif);
+ background-image:url(../images/kimkelen_logo.png);
  background-repeat:no-repeat;
- border:0px solid #fff;
 }
 
 #login .logo_subtitle{
- font-family:Trebuchet MS, sans-serif !important;
- font-size:20px;
+ font-family:trebuchet ms, serif;
+ font-size:10px;
  color:#fff;
- margin: 5px 0px 0px 22px;
+ margin:5px 0px 0px 40px;
  padding-bottom:5px;
- text-align: left;
+ text-align:left;
 }
 
 #login .title_login {
  font-size:18px;
  font-weight:bold;
- color:#fff;
- margin:23px 12px 5px 12px;
+ color:#000;
+ padding-bottom:10px;
+ margin:23px 25px 10px 25px;
+ background:url(../images/line.png) left bottom ;
+ background-repeat:no-repeat;
  text-align:left;
 }
 
 #login .form_row {
- margin:5px 12px;
+ margin:5px 25px 5px 25px;
  border:0px solid red;
- text-align:left;
 }
 
 #login .name {
  font-size:12px;
- color:#fff;
+ color:#000;
  margin-top:5px;
+ text-align:left;
 }
 
 #login .password {
  font-size:12px;
- color:#fff;
-
+ color:#000;
+ text-align:left;
 }
 
 #login .remember {
  font-size:12px;
- color:#fff;
+ color:#000;
  margin-top:5px;
-
+ text-align:left;
 }
 
 #signin_password, #signin_username {
- border:0px solid #fff;
- margin:0px;
+ border:1px solid #000;
+ margin:4px;
  padding:2px;
- height:18px;
- width:220px;
- font-family:trebuchet ms,sans-serif;
+ height:25px;
+ width:250px;
  font-size:11px;
+ text-align:left;
 }
-
-
 
 #login .link_login {
  font-size:12px;
@@ -101,26 +107,27 @@ body {
 
 #login .button {
  margin-top:10px;
+ border:0px solid red;
  font-weight:bold;
  font-size:12px;
  color:#fff;
+ height:auto;
+ width:auto;
  text-decoration:none;
+ outline:none;
  background:none;
- padding:0;
+ padding:5px 10px;
+ background:#363636;
  float:right;
- text-align:right;
- width:220px;
- border:0px solid #fff;
+ -moz-border-radius: 5px 5px 5px 5px;
 }
 
 #login .form_footer {
  margin:5px 0px 5px 0px;
- border-bottom:2px solid #003F2D;
- text-align:left;
- color:#ccc;
+ text-align:center;
+ color:#000;
  clear:both;
  width:300px;
- margin-left:15px;
 }
 
 #login .error_list {
@@ -131,24 +138,22 @@ body {
   font-size: 10px;
 }
 
-#signin_captcha {
- border:0px solid #f37321;
- padding:2px;
- height:24px;
- width:80px;
- margin-right:20px;
+.captcha_label {
+ font-size:11px;
  float:left;
+}
 
+#signin_captcha {
+ border:1px solid #000;
+ padding:2px;
+ height:26px;
+ width:80px;
+ font-size:11px;
+ margin-top:10px;
+ margin-right:20px;
 }
 
 .captcha {
-  float:right;
-}
-
-label {
- float:left;
- width:220px;
- margin-top:10px;
- margin-bottom:2px;
- color:#fff;
+  margin-top:10px;
+  float:left;
 }

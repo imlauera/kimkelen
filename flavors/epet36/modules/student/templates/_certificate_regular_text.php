@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with Kimkëlen.  If not, see <http://www.gnu.org/licenses/gpl-2.0.html>.
  */ ?>
-<?php $division = DivisionPeer::retrieveByStudentCareerSchoolYear($student->getCurrentStudentCareerSchoolYear());?>
 <p>
-    Las autoridades del <?php echo SchoolBehaviourFactory::getInstance()->getSchoolName() ?>,
-    certifican que <b><?php echo $student .' '. $student->getPerson()->getFullIdentification() ?> </b>
-    es alumno/a regular de <?php echo $division->getYear() . '° ' . $division->getDivisionTitle()->getName() ?> en el presente ciclo lectivo. 
+    Las Autoridades de la <?php echo SchoolBehaviourFactory::getInstance()->getSchoolName() ?>, hace constar que
+    <b><?php echo $student .' '. $student->getPerson()->getFullIdentification() ?> </b>
+    es alumno regular de <?php echo $student->getCurrentStudentCareerSchoolYear()->getYear() . '° año'?>, y cursa 1 o 2 (optativo) veces 
+    por semana a contraturno en el presente ciclo lectivo.
 </p>

@@ -3,9 +3,9 @@ default:
     content-type: text/html
 
   metas:
-    title:         E.P.E.T. N° 36
-    description:   E.P.E.T. N° 36
-    keywords:      epet36, escuela
+    title:         Kimkëlen
+    description:   Sistema de gestión de alumnos - CeSPI - UNLP
+    keywords:      Kimkelen, Cespi, unlp, alumnos
     language:      es_AR
     #robots:       index, follow
 

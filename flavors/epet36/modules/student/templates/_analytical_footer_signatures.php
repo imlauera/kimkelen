@@ -21,15 +21,9 @@
 ?>
 <div id="analytic_signatures">
     <div id="signature_1" class="signature">
-        <div>Lic. Noelia Gimenez</div>
-        <?php echo __('analytic_signature_1'); ?>
+        <div> Lic. Alicia Gradenecker</div>
     </div>
     <div id="signature_2" class="signature">
-        <div>Lic. Alicia Cristina Gradenecker</div>
-        <?php echo __('analytic_signature_2'); ?>
-    </div>
-    <div id="signature_4" class="signature signature_4">
-        <div>Laura Días</div>
-        <?php echo __('analytic_signature_4'); ?>
+        <div>Lic. Noelia Dias</div>
     </div>
 </div>

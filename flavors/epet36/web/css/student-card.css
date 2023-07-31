@@ -7,15 +7,18 @@ and open the template in the editor.
     Created on : 18/09/2019, 13:22:11
     Author     : nvidela
 */
-
+body
+{
+    background-color: #fff !important;
+}
 .logo_student_card
 { 
-  width: 6%
+  width: 22%
 }
 
 .logo_unlp_student_card
 { 
-  width: 21%
+  width: 20%
 }
 
 .header-img
