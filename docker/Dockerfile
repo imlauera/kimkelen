@@ -14,6 +14,5 @@ RUN chown -R apache /app/data
 COPY config/extra.conf /etc/apache2/conf.d/extra.conf
 RUN apk add -U --no-cache apache2-ssl
 COPY config/ssl/ssl.conf /etc/apache2/conf.d/ssl.conf
-RUN mkdir -p /etc/cloudflare/
-COPY config/ssl/epet36misiones.edu.ar.pem /etc/cloudflare/
-COPY config/ssl/epet36misiones.edu.ar.key /etc/cloudflare/
+COPY config/ssl/server.pem /etc/ssl/apache2/
+COPY config/ssl/server.key /etc/ssl/apache2/
