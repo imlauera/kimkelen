@@ -1,3 +1,4 @@
+    # No se usa
     # This is the configuration for conservatorio
     #<VirtualHost 127.0.0.1:80>
     #  ServerName conservatorio.localhost
@@ -16,8 +17,8 @@
     #</VirtualHost>
 
     <VirtualHost *:80>
-      ServerName epet36misiones.is-an.app
-      #ServerAlias epet36misiones.is-an.app
+      ServerName epet36misiones.edu.ar
+      #ServerAlias www.epet36misiones.edu.ar
       DocumentRoot "/app/web"
       <Directory "/app/web">
         Options -Indexes +FollowSymLinks -MultiViews
