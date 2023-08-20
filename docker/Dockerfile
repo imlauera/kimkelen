@@ -14,5 +14,3 @@ RUN chown -R apache /app/data
 COPY config/extra.conf /etc/apache2/conf.d/extra.conf
 RUN apk add -U --no-cache apache2-ssl
 COPY config/ssl.conf /etc/apache2/conf.d/ssl.conf
-COPY config/ssl/server.pem /etc/ssl/apache2/
-COPY config/ssl/server.key /etc/ssl/apache2/
