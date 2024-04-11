@@ -21,9 +21,9 @@
 ?>
 <div id="analytic_signatures">
     <div id="signature_1" class="signature">
-        <div> Lic. Alicia Gradenecker</div>
+        <div> Lic. Alicia Cristina Gradenecker</div>
     </div>
     <div id="signature_2" class="signature">
-        <div>Lic. Noelia Dias</div>
+        <div>Lic. Noelia Gimenez</div>
     </div>
 </div>

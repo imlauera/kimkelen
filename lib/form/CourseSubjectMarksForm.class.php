@@ -63,7 +63,7 @@ class CourseSubjectMarksForm extends BaseCourseSubjectForm
           if($configuration->isNumericalMark())
           {
             $widgets[$widget_name] = new sfWidgetFormInput(array('default' => $course_subject_student_mark->getMark()), array('class' => 'mark'));
-            $validators[$widget_name] = new sfValidatorInteger($options, $messages);
+            $validators[$widget_name] = new sfValidatorNumber($options, $messages);
           }
           else
           {
