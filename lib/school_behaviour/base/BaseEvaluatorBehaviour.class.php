@@ -945,9 +945,11 @@ class BaseEvaluatorBehaviour extends InterfaceEvaluatorBehaviour
         return $scsy_c;
     }
     elseif(!is_null($scsy_c) &&  $last_scsy->getCareerSchoolYear()->getSchoolYear()->getYear() > $scsy_c->getCareerSchoolYear()->getSchoolYear()->getYear() )
-    {//si el ultimo año registrado es mayor al cursado me fijo si el último es 2020
+    {//si el ultimo año registrado es mayor al cursado me fijo si el último es 2023
         
-        if($last_scsy->getCareerSchoolYear()->getSchoolYear()->getYear() == 2020 || $last_scsy->getCareerSchoolYear()->getSchoolYear()->getYear() == 2021 )
+        $years  = array(2023);
+        //if($last_scsy->getCareerSchoolYear()->getSchoolYear()->getYear() == 2023)
+        if( in_array($last_scsy->getCareerSchoolYear()->getSchoolYear()->getYear(), $years))
         {
             
             $c = new Criteria();
@@ -964,7 +966,6 @@ class BaseEvaluatorBehaviour extends InterfaceEvaluatorBehaviour
             $c->addDescendingOrderByColumn(StudentCareerSchoolYearPeer::YEAR);
 
             $scsy_2 = StudentCareerSchoolYearPeer::doSelectOne($c);
-            $years  = array(2020,2021);
             if(!is_null($scsy_2) && in_array($scsy_2->getCareerSchoolYear()->getSchoolYear()->getYear(), $years)  )
             {
                 

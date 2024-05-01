@@ -394,7 +394,7 @@ class BaseAnalyticalBehaviour
                 }
 
                 // Cálculo del promedio por año
-                if($school_year->getYear() != 2020)
+                if($school_year->getYear() != 2023)
                 {
                   foreach ($this->objects as $year => $data)
                   {
