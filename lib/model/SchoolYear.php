@@ -390,7 +390,9 @@ class SchoolYear extends BaseSchoolYear
 
   public function areAllExaminationsClosed()
   {
-    $lastYear = (int)(date('Y'))-1;
+    //$lastYear = (int)(date('Y'))-1;
+    //Hardcodeo el año porque es irrevertible y tendria que volver a un backup si cometen el error de apretarlo.
+    $lastYear = (int)2023;
 
     if (count(ExaminationPeer::retrieveForSchoolYearAndExaminationNumber($this, SchoolBehaviourFactory::getEvaluatorInstance()->getFebruaryExaminationNumber())) == 0 && $this->year != $lastYear)
     {
