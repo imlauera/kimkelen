@@ -109,4 +109,5 @@
 
 <div class="rownotice">
 	<div class="titletable"><?php echo __('Observations') ?></div>
+	<p><?php echo $student->getPerson()->getObservations(); ?> </p>
 </div>
