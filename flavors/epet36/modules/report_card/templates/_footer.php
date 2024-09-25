@@ -103,6 +103,7 @@
 
 	<div class="rowfirm_authority">
 		<div class="titletable"><?php echo __('Authority signature') ?></div>
+		<img src="/images/firma_director.png" width="82%" height="82%"/>
 	</div>
 
 </div>
